@@ -8,6 +8,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -34,7 +35,7 @@ public class JsonHandler {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        ArrayList<ChatMessage> chatMessages = new ArrayList<ChatMessage>();
+        ArrayList<ChatMessage> chatMessages = new ArrayList<>();
         JSONArray obj = new JSONArray();
         try {
             JSONParser parser = new JSONParser();
@@ -43,12 +44,13 @@ public class JsonHandler {
             System.out.println(e.getMessage());
         }
         Iterator it = obj.iterator();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS");
         while (it.hasNext()) {
             JSONObject jObj = (JSONObject) it.next();
             String mes = (String) jObj.get("message");
             String author = (String) jObj.get("author");
             UUID id = UUID.fromString((String) jObj.get("id"));
-            Timestamp tStamp = new Timestamp(Long.parseLong((String) jObj.get("timestamp")));
+            Timestamp tStamp = new Timestamp((long)jObj.get("timestamp"));
             ChatMessage chMes = new ChatMessage(id, mes, author, tStamp);
             chatMessages.add(chMes);
         }
