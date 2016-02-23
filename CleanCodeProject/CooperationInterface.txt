@@ -1,0 +1,13 @@
+Welcome! This program lets you work with chat messages.
+Follow commands to do appropriate things:
+1 - upload messages from file, enter file name.
+2 - save all messsages to file, enter file name.
+3 - add new  message, enter message, author, timestamp in separate lines.
+4 - show message history in chronological order.
+5 - remove message throught ID, enter ID.
+6 - search in message history by author, enter author.
+7 - search in message history by key word (lexem), enter key word (lexem).
+8 - search in message history with regular expression, enter regular expression.
+9 - show message history of a particular time period, enter start time, end time.
+
+0 - exit.
