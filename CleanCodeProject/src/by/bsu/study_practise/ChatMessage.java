@@ -44,6 +44,6 @@ public class ChatMessage {
         return "id: " + id +
                 "\r\nmessage: " + message +
                 "\r\nauthor: " + author +
-                "\r\ntimestamp: " + timestamp;
+                "\r\ntimestamp: " + timestamp.getTime();
     }
 }

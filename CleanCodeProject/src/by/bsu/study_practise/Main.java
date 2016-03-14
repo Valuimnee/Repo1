@@ -2,12 +2,16 @@ package by.bsu.study_practise;
 
 import java.io.*;
 import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Scanner;
+import java.util.UUID;
 
 public class Main {
     public static void main(String[] args) {
+        /*Date date = new Date();
+        Timestamp tst = new Timestamp(date.getTime());
+        System.out.println(tst.getTime());
+        UUID id = UUID.randomUUID();
+        System.out.println(id);*/
         Main main = new Main();
         main.writeConditions("CooperationInterface.txt");
         main.chatOperations();
@@ -29,68 +33,70 @@ public class Main {
 
     public void chatOperations() {
         Chat chat = new Chat();
-        boolean isWorking = true;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss:SSS");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        //Scanner sc = new Scanner(System.in);
+        //boolean isWorking = true;
+        Scanner sc = new Scanner(System.in);
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter("logfile.txt"));
             String command;
-            //int command;
-            while (isWorking) {
-                //command = sc.nextInt();
-                command = br.readLine();
-                switch (command) {
-                    case "0": {
-                        isWorking = false;
-                    }
-                    break;
-                    case "1": {
-                        command = br.readLine();
+            int com = sc.nextInt();
+            while (com!=0) {
+                switch (com) {
+                    case 1: {
+                        command = sc.next();
                         chat.addMessages(command);
+                        break;
                     }
-                    break;
-                    case "2": {
-                        chat.writeMessages(br.readLine());
+                    case 2: {
+                        chat.writeMessages(sc.next());
+                        break;
                     }
-                    break;
-                    case "3": {
-                        String message = br.readLine();
-                        String author = br.readLine();
-                        String tstamp = br.readLine();
-                        Date date = new Date();
+                    case 3: {
+                        sc.nextLine();
+                        String message = sc.nextLine();
+                        String author = sc.nextLine();
+                        String tstamp = sc.nextLine();
+                        long stamp = 0;
                         try {
-                            date = dateFormat.parse(tstamp);
-                        } catch (ParseException e) {
+                            stamp = Long.parseLong(tstamp);
+                        } catch (Exception e) {
                             String errMessage = "Wrong message timestamp: " + tstamp + ".\n";
                             bw.write("Add new massage: " + errMessage);
                         }
-                        ChatMessage chMes = new ChatMessage(message, author, new Timestamp(date.getTime()));
+                        ChatMessage chMes = new ChatMessage(message, author, new Timestamp(stamp));
                         chat.addMessage(chMes);
+                        break;
                     }
-                    break;
-                    case "4": {
+                    case 4: {
+                        chat.viewByTime();
+                        break;
                     }
-                    break;
-                    case "5": {
+                    case 5: {
+                        UUID id = UUID.fromString(sc.next());
+                        if(chat.deleteById(id)){
+                            System.out.println("Message with "+id.toString()+" id deleted.");
+                        }else{
+                            System.out.println("There is no message with "+id+" id.");
+                        }
+                        break;
                     }
-                    break;
-                    case "6": {
+                    case 6: {
+                        break;
                     }
-                    break;
-                    case "7": {
+                    case 7: {
+                        break;
                     }
-                    break;
-                    case "8": {
+                    case 8: {
+                        break;
                     }
-                    break;
-                    case "9": {
+                    case 9: {
+                        break;
                     }
-                    break;
                 }
+                com = sc.nextInt();
             }
-            br.close();
             bw.close();
+            sc.close();
+            System.out.println("Program has finished work.");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
