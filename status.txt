@@ -33,3 +33,7 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 
 >>>>>>> ea75c1b02e7cdb5c5d994c49373a083406d22a8e
+
+On branch master
+nothing to commit, working directory clean
+
