@@ -1,0 +1,12 @@
+commit 05f31d0307f9e297ae8225abee3c6530a653e3d2
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Fri Mar 18 02:20:31 2016 +0300
+
+    Add status.txt
+
+commit 8aab90c0c39af3cef2950a933972a0c1217a738a
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Fri Mar 18 02:18:27 2016 +0300
+
+    Add .gitinore
+
