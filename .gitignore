@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # gitignore for Idea
+=======
+# Intellij IDEA files
+>>>>>>> ea75c1b02e7cdb5c5d994c49373a083406d22a8e
 *.iml
 .idea/
 out/

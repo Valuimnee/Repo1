@@ -6,7 +6,12 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
         .idea/
+<<<<<<< HEAD
         01_ChatJson.iml
+=======
+        StPr01.iml
+        out/
+>>>>>>> ea75c1b02e7cdb5c5d994c49373a083406d22a8e
         src/
         status.txt
 
@@ -21,3 +26,10 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
+<<<<<<< HEAD
+=======
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+>>>>>>> ea75c1b02e7cdb5c5d994c49373a083406d22a8e

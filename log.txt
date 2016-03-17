@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 commit 05f31d0307f9e297ae8225abee3c6530a653e3d2
 Author: Calapova Maria <tsalapovadisco@gmail.com>
 Date:   Fri Mar 18 02:20:31 2016 +0300
@@ -9,4 +10,35 @@ Author: Calapova Maria <tsalapovadisco@gmail.com>
 Date:   Fri Mar 18 02:18:27 2016 +0300
 
     Add .gitinore
+=======
+commit 775df1ef7451ea64a544790ff04489b337b82da4
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Tue Feb 23 11:39:59 2016 +0300
+
+    Add Clean Code Project.
+
+commit 6aff2e104fefdb8753b897338d568eccb29717c1
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Mon Feb 15 23:59:27 2016 +0300
+
+    Modifying status.txt
+
+commit c3ff2e9a4d1956af99835ea0a99997d867577c19
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Mon Feb 15 23:41:19 2016 +0300
+
+    Add log.txt
+
+commit 5bff206d06b20fd5968674eed6ab1dcd1025a983
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Mon Feb 15 23:38:41 2016 +0300
+
+    Add status.txt
+
+commit 9fd06af0cf4470f67405464ad4091e08c6a52b57
+Author: Calapova Maria <tsalapovadisco@gmail.com>
+Date:   Mon Feb 15 23:37:19 2016 +0300
+
+    Add .gitignore
+>>>>>>> ea75c1b02e7cdb5c5d994c49373a083406d22a8e
 
