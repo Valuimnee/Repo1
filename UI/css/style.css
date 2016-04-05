@@ -1,0 +1,48 @@
+body {
+	display: table;
+	position: absolute;
+	width:100%;
+	margin: 0em;
+	background-color: #fff8dc;
+}	
+header {
+	
+	display: block;
+	height: 100px;
+	width: 100%-1.5em;
+	background-color: beige;
+	margin-top: 0em;
+	padding: 1em;
+	padding-left: 1.5em;
+}
+.mainpart {
+	background-color: lavender;
+	padding: 1em;
+	text-align: right;
+	height: 720px;
+}
+textarea{
+	width: 80%;
+	height: 60%
+}
+.input{
+	margin-top: 1em;
+}
+.newmes {
+	width: 400px;
+	height: 40px;
+	vertical-align: middle;
+}
+button {
+	position: inline;
+	height: 30px;
+	width: 100px;
+	vertical-align: bottom;
+}
+footer {
+	width: 100%-1em;
+	height: 50px;
+	background-color: beige;
+	padding: 1em;
+	text-align: right;
+}
