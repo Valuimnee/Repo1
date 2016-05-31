@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+	<meta charset="UTF-8"/>
+	<title>NowSpeech</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<script src="js/scripts.js" defer></script>
+</head>
+<body onload="run();">
+	<div class="LogIn"> <textarea class="inputname" rows="1" cols="4" name="UserName" placeholder="Input name"></textarea>
+	<button type="button" id="01">Sign in</button>
+	</div>
+	<header><h1>NowSpeech chat</h1>
+	<h4>Created with HTML5 and CSS3</h4>
+	</header>
+	<div class="mainpart">
+		<table  align="center" width="1000" height="700" border="0" cellspacing="0" cellpadding="4">
+			<tr valign="top"><td width="90%" class="dialog" colspan="2">
+			<ul class="message-list">
+				<li class="message" id="01"><table class="dialod-message" width="992px">
+					<tr class="dialog-part"><td class="text" id="01">Hello!</td>
+					<td rowspan="2" width="108"></td></tr>
+					<tr class="changed" id="01"></tr></table>
+				</li>
+				<li class="message">Good time being!</li>
+			</ul>
+			</td></tr>
+			<tr height="20" bgcolor="white" align="left"><td colspan="2" class="message-number">0</td></tr>
+			<tr height="200" valign="top"><td width="90%"><textarea class="newmes" rows="4" name="Message" id="NewMessageText" placeholder="New message"/></textarea></td>
+			<td><button class="newmesbutton" type="button" name="send" id="SendMessage">Send</button></td></tr>
+		</table>
+	</div>
+	<div class="footer" valign="bottom">Calapova Maria, FAMCS, 2016</div>
+</body>
+</html>
